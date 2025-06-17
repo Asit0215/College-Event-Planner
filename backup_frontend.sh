@@ -13,7 +13,8 @@ TIMESTAMP=$(date "+%Y-%m-%d_%H-%M")
 BACKUP_FILE="$BACKUP_DIR/frontend_backup_$TIMESTAMP.tar.gz"
 
 # backing up html files
-tar -czf "$BACKUP_FILE" -C "$SOURCE_DIR" $(find "$SOURCE_DIR" -maxdepth 1 -name "*.html" -exec basename {} \;)
+tar -czf "$BACKUP_FILE" -C "$SOURCE_DIR" $(find "$SOURCE_DIR" -maxdepth 1 \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -exec basename {} \;)
+
 
 # shows log succes
 echo "[$(date)] Backup created: $BACKUP_FILE" >> "$LOG_FILE"
