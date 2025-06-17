@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Event | College Event Planner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Main Navbar -->
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">College Events</h1>
+    <ul class="flex space-x-6">
+      <li><a href="home.html" class="hover:text-blue-500">Home</a></li>
+      <li><a href="events.html" class="hover:text-blue-500">Events</a></li>
+      <li><a href="about.html" class="hover:text-blue-500">About</a></li>
+      <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content -->
+  <section class="max-w-3xl mx-auto bg-white shadow-md rounded-xl mt-10 p-8">
+    
+    <h2 class="text-3xl font-bold text-center text-blue-600 mb-6">Create a New Event</h2>
+
+    <form action="#" method="POST" class="space-y-6">
+      <div>
+        <label class="block mb-2 font-medium">Event Title</label>
+        <input type="text" name="title" placeholder="e.g. AI Workshop" required
+               class="w-full border border-gray-300 rounded-lg p-3 focus:outline-blue-500" />
+      </div>
+
+      <div>
+        <label class="block mb-2 font-medium">Description</label>
+        <textarea name="description" rows="4" placeholder="Enter event description" required
+                  class="w-full border border-gray-300 rounded-lg p-3 focus:outline-blue-500"></textarea>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block mb-2 font-medium">Date</label>
+          <input type="date" name="date" required
+                 class="w-full border border-gray-300 rounded-lg p-3 focus:outline-blue-500" />
+        </div>
+        <div>
+          <label class="block mb-2 font-medium">Time</label>
+          <input type="time" name="time" required
+                 class="w-full border border-gray-300 rounded-lg p-3 focus:outline-blue-500" />
+        </div>
+      </div>
+
+      <div>
+        <label class="block mb-2 font-medium">Venue</label>
+        <input type="text" name="venue" placeholder="e.g. Seminar Hall A" required
+               class="w-full border border-gray-300 rounded-lg p-3 focus:outline-blue-500" />
+      </div>
+
+      <div>
+        <label class="block mb-2 font-medium">Organizing Department</label>
+        <input type="text" name="department" placeholder="e.g. Department of CSE" required
+               class="w-full border border-gray-300 rounded-lg p-3 focus:outline-blue-500" />
+      </div>
+
+      <div>
+        <label class="block mb-2 font-medium">Speakers (Optional)</label>
+        <input type="text" name="speakers" placeholder="e.g. Dr. A. Kumar, Ms. R. Nair"
+               class="w-full border border-gray-300 rounded-lg p-3 focus:outline-blue-500" />
+      </div>
+
+      <div>
+        <label class="block mb-2 font-medium">Upload Event Poster (Optional)</label>
+        <input type="file" name="poster" accept="image/*"
+               class="w-full border border-gray-300 rounded-lg p-3 bg-white" />
+      </div>
+
+      <div>
+        <label class="block mb-2 font-medium">Amount (₹)</label>
+        <input type="number" name="amount" placeholder="e.g. 100" required min="0"
+               class="w-full border border-gray-300 rounded-lg p-3 focus:outline-blue-500" />
+      </div>
+
+      <div class="text-center">
+        <button type="submit"
+                class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          Create Event
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center p-4 text-sm text-gray-600 mt-10">
+    © 2025 College Event Planner. All rights reserved.
+  </footer>
+
+</body>
+</html>
