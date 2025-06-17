@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Details | College Event Planner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Main Navbar -->
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">College Events</h1>
+    <ul class="flex space-x-6">
+      <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+      <li><a href="about.html" class="hover:text-blue-500">About</a></li>
+      <li><a href="events.html" class="text-blue-500 font-semibold">Events</a></li>
+      <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Secondary Nav (Event Pages) -->
+  <div class="bg-blue-100 py-3 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6">
+      <ul class="flex flex-wrap gap-4 justify-center text-blue-700 font-medium">
+        <li><a href="event-details.html" class="underline">Event Details</a></li>
+        <li><a href="event-listing.html" class="hover:underline">Event Listing</a></li>
+        <li><a href="event-creation.html" class="hover:underline">Event Creation</a></li>
+        <li><a href="event-management.html" class="hover:underline">Event Management</a></li>
+        <li><a href="event-registration.html" class="hover:underline">Event Registration</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Event Details Content -->
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <div class="bg-white shadow-md rounded-xl p-8">
+      <h2 class="text-3xl font-bold text-blue-600 mb-4">AI Workshop: Building Intelligent Apps</h2>
+      
+      <p class="text-gray-600 mb-6">Join us for an exciting hands-on workshop focused on Artificial Intelligence and its real-world applications. Learn from industry experts, explore AI tools, and build your own intelligent app!</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div>
+          <p><strong class="text-blue-600">📅 Date:</strong> July 22, 2025</p>
+          <p><strong class="text-blue-600">⏰ Time:</strong> 10:00 AM - 4:00 PM</p>
+          <p><strong class="text-blue-600">📍 Venue:</strong> Seminar Hall A, CS Block</p>
+        </div>
+        <div>
+          <p><strong class="text-blue-600">🎤 Speakers:</strong> Dr. Jane Smith, Mr. Ravi Kumar</p>
+          <p><strong class="text-blue-600">💼 Organized by:</strong> Department of Computer Science</p>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-2 text-gray-700">Agenda:</h3>
+      <ul class="list-disc list-inside text-gray-700 mb-6">
+        <li>Introduction to AI & ML</li>
+        <li>Hands-on session: Building a chatbot</li>
+        <li>Panel Discussion with Experts</li>
+        <li>Project showcase & feedback</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-2 text-gray-700">Registration:</h3>
+      <p class="text-gray-700 mb-6">
+        Limited seats available. Click the button below to register:
+      </p>
+      <a href="event-registration.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        Register Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center p-4 text-sm text-gray-600">
+    © 2025 College Event Planner. All rights reserved.
+  </footer>
+
+</body>
+</html>
