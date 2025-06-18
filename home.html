@@ -1,98 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>College Event Planner</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Toggle notification dropdown
-    function toggleNotifications() {
-      const dropdown = document.getElementById('notificationDropdown');
-      dropdown.classList.toggle('hidden');
-    }
-  </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-blue-600">College Events</h1>
+  <nav class="bg-white shadow p-4 flex items-center justify-between">
+  <!-- Left side: Logo -->
+  <h1 class="text-2xl font-bold text-blue-600">College Events</h1>
 
-    <div class="flex items-center space-x-6">
-      <ul class="flex space-x-6">
-        <li><a href="#" class="text-blue-500 font-semibold">Home</a></li>
-        <li><a href="events.html" class="hover:text-blue-500">Events</a></li>
-        <li><a href="about.html" class="hover:text-blue-500">About</a></li>
-        <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
-      </ul>
+  <!-- Right side: Nav links + profile -->
+  <div class="flex items-center space-x-6 ml-auto">
+    <a href="home.html" class="text-blue-500 font-semibold">Home</a>
+    <a href="events.html" class="hover:text-blue-500">Events</a>
+    <a href="about.html" class="hover:text-blue-500">About</a>
+    <a href="contact.html" class="hover:text-blue-500">Contact</a>
 
-      <!-- Notification Icon -->
-      <div class="relative">
-        <button onclick="toggleNotifications()" class="relative">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-600 hover:text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M15 17h5l-1.405-1.405C18.79 14.79 18 13.4 18 12V8a6 6 0 10-12 0v4c0 1.4-.79 2.79-1.595 3.595L3 17h5m4 0v1a3 3 0 006 0v-1m-6 0h6" />
-          </svg>
-          <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
-        </button>
-
-        <!-- Notification Dropdown -->
-        <div id="notificationDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-          <div class="p-4 text-sm text-gray-700">
-            <p class="font-semibold mb-2">Notifications</p>
-            <ul class="space-y-2 max-h-60 overflow-y-auto">
-              <li class="border-b pb-2">🎉 You’ve been approved for Tech Fest 2025.</li>
-              <li class="border-b pb-2">📅 Entrepreneurship Summit starts tomorrow!</li>
-              <li class="pb-2">📝 New event "AI Seminar" added by CSE Dept.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Profile Image -->
-      <a href="profile.html">
+    <!-- Profile Dropdown -->
+    <div class="relative">
+      <button id="profileBtn">
         <img src="https://via.placeholder.com/40" alt="Profile"
           class="w-10 h-10 rounded-full border-2 border-blue-400 hover:scale-105 transition-transform">
-      </a>
+      </button>
+      <div id="profileDropdown"
+          class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-4 z-50 text-sm">
+        <p id="usernameDisplay" class="font-semibold text-blue-600 mb-2">Welcome, Guest</p>
+        <a href="profile.html" class="block mb-2 text-blue-500 hover:underline">Profile</a>
+        <button id="logoutBtn" class="w-full text-left text-red-600 hover:underline">Logout</button>
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Hero Section -->
   <section class="text-center py-20 bg-blue-100">
     <h2 class="text-4xl font-bold mb-4">Plan, Organize & Attend College Events</h2>
     <p class="text-lg mb-6">From fests to seminars, manage everything in one place.</p>
-    <a href="#events" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Explore Events</a>
+    <a href="events.html" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Explore Events</a>
   </section>
 
   <!-- Featured Events -->
   <section id="events" class="py-16 px-4 max-w-6xl mx-auto">
     <h3 class="text-3xl font-semibold text-center mb-10">Featured Events</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Event Card -->
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-        <img src="https://via.placeholder.com/400x200" alt="Event 1" class="w-full">
+
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition event-card">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+     alt="Tech Fest 2025" class="w-full">
+
+
+
         <div class="p-4">
           <h4 class="text-xl font-semibold">Tech Fest 2025</h4>
           <p class="text-sm text-gray-600">Apr 21–23 | Main Auditorium</p>
         </div>
       </div>
 
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-        <img src="https://via.placeholder.com/400x200" alt="Event 2" class="w-full">
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition event-card">
+<img src="https://www.venuereport.com/media/cache/resolve/venue_roundup_listing_image/uploads/%2B0Regular_Roundup/2018/5-May/WorldFestivals/YeePengLanternFestival-JacobRiglin-01.jpg" 
+     alt="Cultural Night" class="w-full rounded-xl shadow-md">
+
+
+
+
         <div class="p-4">
           <h4 class="text-xl font-semibold">Cultural Night</h4>
           <p class="text-sm text-gray-600">May 5 | Open Air Theatre</p>
         </div>
       </div>
 
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-        <img src="https://via.placeholder.com/400x200" alt="Event 3" class="w-full">
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition event-card">
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
+             alt="Entrepreneurship Summit" class="w-full">
         <div class="p-4">
           <h4 class="text-xl font-semibold">Entrepreneurship Summit</h4>
           <p class="text-sm text-gray-600">June 3–4 | Innovation Hall</p>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -100,6 +90,10 @@
   <footer class="bg-gray-100 text-center p-4 mt-12 text-sm text-gray-500">
     © 2025 College Event Planner. All rights reserved.
   </footer>
+
+  <!-- jQuery + Custom JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="home.js"></script>
 
 </body>
 </html>
