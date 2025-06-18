@@ -7,6 +7,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
+    <script>
+  if (localStorage.getItem("userRole") !== "student") {
+    alert("Access Denied! Please access this page from the Home page.");
+    window.location.href = "home.html";
+  }
+</script>
+
 
   <!-- Main Navbar -->
   <nav class="bg-white shadow p-4 flex justify-between items-center">
@@ -16,7 +23,6 @@
       <li><a href="events.html" class="hover:text-blue-500">Events</a></li>
       <li><a href="about.html" class="hover:text-blue-500">About</a></li>
       <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
-      
     </ul>
   </nav>
 
@@ -94,6 +100,8 @@
   <footer class="bg-gray-200 text-center p-4 text-sm text-gray-600 mt-10">
     © 2025 College Event Planner. All rights reserved.
   </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="event-creation.js"></script>
 
 </body>
 </html>
