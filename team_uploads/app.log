@@ -1,0 +1,25 @@
+2025-06-26 12:06:53 [main] INFO  com.example1.project1.UserServiceLog - UserLogger started...
+2025-06-26 12:06:53 [main] INFO  com.example1.project1.UserServiceLog - User registered: athithya123
+2025-06-26 12:06:53 [main] DEBUG com.example1.project1.UserServiceLog - Login successful for user: athithya123
+2025-06-26 12:06:53 [main] WARN  com.example1.project1.UserServiceLog - Login failed for user: unknown
+2025-06-26 12:06:53 [main] INFO  com.example1.project1.UserServiceLog - User deleted: athithya123
+2025-06-26 12:07:18 [main] INFO  com.example1.project1.EventServiceLog - EventLogger started...
+2025-06-26 12:07:18 [main] INFO  com.example1.project1.EventServiceLog - Event created: Tech Fest
+2025-06-26 12:07:18 [main] INFO  com.example1.project1.EventServiceLog - Event cancelled: Cultural Night
+2025-06-26 12:07:18 [main] INFO  com.example1.project1.EventServiceLog - Feedback for Tech Fest: Awesome event!
+2025-06-26 12:52:21 [main] INFO  com.example1.project1.UserServiceLog - UserLogger started...
+2025-06-26 12:52:21 [main] INFO  com.example1.project1.UserServiceLog - User registered: aa123
+2025-06-26 12:52:21 [main] DEBUG com.example1.project1.UserServiceLog - Login successful for user: aa123
+2025-06-26 12:52:21 [main] WARN  com.example1.project1.UserServiceLog - Login failed for user: unknown
+2025-06-26 12:52:21 [main] INFO  com.example1.project1.UserServiceLog - User deleted: aa123
+2025-06-26 12:53:26 [main] INFO  com.example1.project1.UserServiceLog - UserLogger started...
+2025-06-26 12:53:26 [main] INFO  com.example1.project1.UserServiceLog - User registered: ab123
+2025-06-26 12:53:26 [main] DEBUG com.example1.project1.UserServiceLog - Login successful for user: ab123
+2025-06-26 12:53:26 [main] WARN  com.example1.project1.UserServiceLog - Login failed for user: unknown
+2025-06-26 12:53:26 [main] INFO  com.example1.project1.UserServiceLog - User deleted: ab123
+2025-06-26 13:00:15 [main] INFO  com.example1.project1.FeedbackLogger - Feedback from Athithya for Tech Fest 2025: Great event! Loved the workshops.
+2025-06-26 13:00:15 [main] INFO  com.example1.project1.FeedbackLogger - Anonymous feedback for Cultural Fest 2025: The music night was amazing!
+2025-06-26 13:00:15 [main] INFO  com.example1.project1.FeedbackLogger - Anonymous feedback for AI Workshop: Could improve the session pace.
+2025-06-26 13:01:25 [main] WARN  com.example1.project1.EventCancellationLogger - Event cancelled: Tech Fest 2025 | Reason: Insufficient registrations
+2025-06-26 13:01:25 [main] WARN  com.example1.project1.EventCancellationLogger - Event cancelled: AI Workshop | Reason: Speaker unavailable
+2025-06-26 13:01:25 [main] WARN  com.example1.project1.EventCancellationLogger - Event cancelled: Sports Day | Reason: Weather conditions
