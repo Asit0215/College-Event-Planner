@@ -19,3 +19,4 @@ done
 
 # Final message
 echo "✅ All logs compressed and moved to backup!"
+
